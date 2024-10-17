@@ -1,0 +1,53 @@
+.box
+{
+    height: 200px;
+    width: 600px;
+    background-color: pink;
+    animation: colorAni 5s ease-in 0s infinite alternate;
+    /* animation-name: colorAni;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+/* h1
+{
+    animation-name: fontAni;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} */
+@keyframes fontAni
+{
+    from
+    {
+        font-size: 20px;
+    }    
+    to
+    {
+        font-size: 40px;
+    }
+}
+@keyframes colorAni 
+{
+    0%
+    {
+        background-color: pink;
+    }
+    30%
+    {
+        background-color: cornsilk;
+    }
+    60%
+    {
+        background-color: cornflowerblue;
+    }
+    100%
+    {
+        background-color: crimson;
+    }
+    
+}
