@@ -1,0 +1,30 @@
+#first
+{
+    height: 300px;
+    width: 300px;
+    background-color: #0fffff;
+    border: 5px dotted border black;
+    margin: 20px auto;
+    padding: 1em;
+    transition: 3s;
+    box-shadow: 2px 2px 8px black;
+}
+#first:hover
+{
+    border-radius: 50%;
+    background-color: rgb(255, 234, 0);
+}
+.second
+{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+}
+#third ul li {
+    display: inline-block;
+    list-style-type: disc;
+    margin-right: 10px;
+}
