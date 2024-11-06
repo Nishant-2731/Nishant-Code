@@ -1,0 +1,16 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+    <h3>Listing Details : <a href="/listings/<%= listing._id %>/edit">Edit this Listing</a></h3>
+    <ul>
+        <li><b>Title:</b> <%= listing.title %></li>
+        <li><b>Description:</b> <%= listing.description %></li>
+        <li><b>Image:</b> <a href="<%= listing.image.url %>">Click Here</a></li>
+        <li><b>Price:</b> &#8377; <%= listing.price.toLocaleString("en-IN") %></li> 
+        <!-- This function allows for scommas in Indian format -->
+        <li><b>Location:</b> <%= listing.location %></li>
+        <li><b>Country:</b> <%= listing.country %></li>
+    </ul>
+    <form action="/listings/<%= listing._id %>?_method=DELETE" method="POST">
+        <button>Delete this Listing</button>
+    </form>
+</body>
