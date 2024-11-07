@@ -1,6 +1,14 @@
 body
 {
     font-family: "Plus Jakarta Sans", sans-serif;    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container
+{
+    flex: 1;
 }
 
 /* Navbar */
@@ -109,4 +117,38 @@ body
 {
     opacity: 0.2;
     background-color: white;
+}
+
+/* Add New Listing Page */
+
+.add-btn
+{
+    background-color: #fe424d;
+    border: none;
+}
+
+/* Edit Listing Page */
+
+.edit-btn
+{
+    background-color: #fe424d;
+    border: none;
+}
+
+/* Show Page */
+
+.show-card
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.show-img
+{
+    height: 30vh;
+}
+
+.btns
+{
+    display: flex;
 }
