@@ -4,7 +4,8 @@
     <div class="col-8 offset-2">
       <h2>Create New Listing</h2>
       <br>
-      <form action="/listings" method="POST">
+      <!-- nonvalidate disables browser's default validation display -->
+      <form action="/listings" method="POST" novalidate class="needs-validation">
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
           <input
@@ -13,7 +14,10 @@
             placeholder="Add a Catchy Title"
             type="text"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">Title is Required</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <div class="mb-3">
@@ -24,7 +28,10 @@
             placeholder="Enter Description"
             type="text"
             class="form-control"
+            required
           ></textarea>
+          <div class="invalid-feedback">Description is Required</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <div class="mb-3">
@@ -36,6 +43,7 @@
             type="text"
             class="form-control"
           />
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <div class="row">
@@ -45,9 +53,10 @@
               id="price"
               name="listing[price]"
               placeholder="1200"
-              type="number"
               class="form-control"
+              required
             />
+            <div class="invalid-feedback">Price is Required</div>
           </div>
 
           <div class="mb-3 col-md-8">
@@ -58,7 +67,9 @@
               placeholder="India"
               type="text"
               class="form-control"
+              required
             />
+            <div class="invalid-feedback">Country is Required</div>
           </div>
         </div>
 
@@ -70,7 +81,9 @@
             placeholder="Jaipur, Rajasthan"
             type="text"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">Location is Required</div>
         </div>
 
         <br>

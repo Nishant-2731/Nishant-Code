@@ -34,20 +34,6 @@ async function main()
     await mongoose.connect("mongodb://127.0.0.1:27017/wanderlust");    
 }
 
-const validateListing = (req, res, next)=>
-{
-    let {error} = listingSchema.validate(req.body);
-    if(error)
-    {
-        let errMsg = error.details.map((el)=>el.message).join(",");
-        throw new ExpressError(400, errMsg);
-    }
-    else
-    {
-        next();
-    }
-}
-
 app.get("/", (req, res)=>
 {
     res.send("Root Route")
@@ -70,8 +56,16 @@ app.get("/listings/new", async (req, res)=>
 
 // Create Route
 
-app.post("/listings", validateListing, wrapAsync(async (req, res, next)=>
+app.post("/listings", wrapAsync(async (req, res, next)=>
 {
+    // New Efficient Method for requesting data from body. More details in new.ejs how to store details in listing object
+
+    // Old Method for checking if listing was even sent
+    // if(!req.body.listing)
+    // {
+    //     throw new ExpressError(400, "Send valid data for listing")
+    // }
+
     let result = listingSchema.validate(req.body);
     if(result.error)
     {
@@ -95,8 +89,14 @@ app.get("/listings/:id/edit", wrapAsync(async (req, res, next)=>
 
 // Update Route
 
-app.put("/listings/:id", validateListing, wrapAsync(async (req, res, next)=>
+app.put("/listings/:id", wrapAsync(async (req, res, next)=>
 {
+    // Old Method for checking if listing was even sent
+    // if(!req.body.listing)
+    // {
+    //     throw new ExpressError(400, "Send valid data for listing")
+    // }
+
     let result = listingSchema.validate(req.body);
     console.log(result);
     let {id} = req.params;
@@ -142,3 +142,33 @@ app.use((err, req, res, next)=>
 });
 
 app.listen(8080, ()=>console.log("Server is Listening on Port: 8080"));
+
+// Old Method for Requesting data from body
+// let {title, description, image, price, country, location} = req.body; 
+// let newListing = new Listing({
+//     title: title,
+//     description: description,
+//     image: {
+//         url :image
+//     },
+//     price: price,
+//     location: location,
+//     country: country
+// });
+
+// Test Route
+
+// app.get("/testListing", async (req, res)=>
+// {
+//     let sampleListing = new Listing({
+//         title: "My New Villa",
+//         description: "By the beach",
+//         // image: ,
+//         price: 1200,
+//         location: "Calangute, Goa",
+//         country: "India"
+//     })
+//     await sampleListing.save();
+//     console.log("Sample was saved");
+//     res.send("Test Successful")
+// })
