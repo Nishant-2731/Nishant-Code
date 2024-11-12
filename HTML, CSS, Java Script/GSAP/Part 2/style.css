@@ -1,0 +1,100 @@
+@font-face 
+{
+    font-family: "gilroy";
+    src: url(./gilroy/Gilroy-Medium.ttf);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html, body
+{
+    height: 100%;
+    width: 100%;
+}
+body
+{
+    overflow-x: hidden;
+}
+/* #page1
+{
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2
+{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#page3
+{
+    height: 100%;
+    width: 100%;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#box
+{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+}
+h1
+{
+    position: relative;
+    font-size: 50px;
+    background-color: yellow;
+}
+h2
+{
+    position: relative;
+    font-size: 40px;
+    background-color: aqua;
+} */
+
+#page1
+{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+}
+#page2
+{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
+#page3
+{
+    height: 100%;
+    width: 100%;
+    background-color: dodgerblue;
+}
+h1
+{
+    position: relative;
+    font-size: 40vw;
+    text-transform: uppercase;
+    /* background-color: yellow; */
+}
+h2
+{
+    position: relative;
+    font-size: 40px;
+    background-color: aqua;
+}

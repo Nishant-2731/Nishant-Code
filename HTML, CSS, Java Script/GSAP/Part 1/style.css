@@ -1,0 +1,81 @@
+@font-face 
+{
+    font-family: "gilroy";
+    src: url(./gilroy/Gilroy-Black.ttf);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: white;
+}
+html, body
+{
+    height: 100%;
+    width: 100%;
+}
+body
+{
+    background-color: black;
+}
+/* #box1
+{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+}
+#box2
+{
+    height: 300px;
+    width: 300px;
+    background-color: blueviolet;
+} */
+/* #box
+{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+} */
+/* #box1
+{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+}
+#box2
+{
+    height: 300px;
+    width: 300px;
+    background-color: blanchedalmond;
+}
+#box3
+{
+    height: 300px;
+    width: 300px;
+    background-color: blueviolet;
+} */
+
+#nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#part2
+{
+    display: flex;    
+    direction: column;
+    justify-content: space-evenly;
+    gap: 50px;
+    padding: 30px 50px;
+}
+h1
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+}

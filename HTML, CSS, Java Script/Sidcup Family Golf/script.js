@@ -1,20 +1,34 @@
 var cursor = document.querySelector("#cursor");
 var blurr = document.querySelector("#cursor-blur");
 
-document.addEventListener("mousemove", function (event) {
+document.addEventListener("mousemove", function (dets) {
     gsap.to(cursor, {
-        x: event.clientX-10,
-        y: event.clientY-10,
-        duration: 0.2, // Adjust this value for smoothness
+        x: dets.x-10,
+        y: dets.y-10,
+        duration: 0.2,
         ease: "power2.out",
     });
     gsap.to(blurr, {
-        x: event.clientX-300,
-        y: event.clientY-300,
-        duration: 4, // Adjust this value for smoothness
+        x: dets.x-300,
+        y: dets.y-300,
+        duration: 4,
         ease: "power2.out",
     });
 });
+
+var h4all = document.querySelectorAll("#nav h4");
+
+h4all.forEach(function(elem){
+    elem.addEventListener("mouseenter", function(){
+        gsap.to(cursor, {
+            
+        })
+    })
+    elem.addEventListener("mouseleave", function(){
+        cursor.style.scale = 1;
+    })
+})
+
 gsap.to("#nav", {
     backgroundColor: "#000",
     duration: 0.5,
