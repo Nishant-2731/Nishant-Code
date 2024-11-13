@@ -65,26 +65,48 @@ function cursorLeave(elem)
     })
 }
 
-// var arrowAll = document.querySelectorAll(".arrow")
-// arrowAll.forEach(function(elem){
-//     elem.addEventListener("mouseenter", cursorEnter(elem), function(elem){
-//         gsap.
-//     })
-//     elem.addEventListener("mouseleave", cursorLeave(elem), function(elem){
-//         gsap.
-//     })
-// })
+var arrowAll = document.querySelectorAll(".arrow")
+arrowAll.forEach(function(elem){
+    elem.addEventListener("mouseenter", function(){
+        cursorEnter(elem);
+        gsap.to(elem, {
+            scale: 0.31,
+            backgroundColor: "#95C11E",
+        })
+        gsap.to(".arrow i", {
+            scale: 3.225806451612903            
+        })
+    })
+    elem.addEventListener("mouseleave", function(){
+        cursorLeave(elem);
+        gsap.to(elem, {
+            scale: 1,
+            backgroundColor: "transparent",
+        })
+        gsap.to(".arrow i", {
+            scale: 1            
+        })
+    })
+})
 
 var h4All = document.querySelectorAll("#nav h4");
 h4All.forEach(function(elem){
-    elem.addEventListener("mouseenter", cursorEnter(elem))
-    elem.addEventListener("mouseleave", cursorLeave(elem))
+    elem.addEventListener("mouseenter", function(){
+        cursorEnter(elem);
+    })
+    elem.addEventListener("mouseleave", function(){
+        cursorLeave(elem);
+    })
 })
 
 var cardAll = document.querySelectorAll(".card .overlay")
 cardAll.forEach(function(elem){
-    elem.addEventListener("mouseenter", cursorEnter(elem))
-    elem.addEventListener("mouseleave", cursorLeave(elem))
+    elem.addEventListener("mouseenter", function(){
+        cursorEnter(elem);
+    })
+    elem.addEventListener("mouseleave", function(){
+        cursorLeave(elem);
+    })
 })
 
 gsap.from("#about-us", {
@@ -145,8 +167,12 @@ gsap.from("#colon2", {
 
 var elemAll = document.querySelectorAll(".elem h2")
 elemAll.forEach(function(elem){
-    elem.addEventListener("mouseenter", cursorEnter(elem))
-    elem.addEventListener("mouseleave", cursorLeave(elem))
+    elem.addEventListener("mouseenter", function(){
+        cursorEnter(elem);
+    })
+    elem.addEventListener("mouseleave", function(){
+        cursorLeave(elem);
+    })
 })
 
 gsap.from("#page4 h1", {

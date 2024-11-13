@@ -6,6 +6,11 @@
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
+*::selection
+{
+    color: #ACE022;
+    background-color: white;
+}
 html, body
 {
     height: 100%;
@@ -81,7 +86,7 @@ video
     text-align: center;
     z-index: 10;
 }
-#page1 .arrow
+.arrow
 {
     height: 240px;
     width: 240px;
@@ -95,10 +100,15 @@ video
     bottom: 0%;
     border: 2px solid #ACE022;
 }
-#page1 .arrow i
+.arrow i
 {
     font-size: 50px;
 }
+/* .arrow:hover i
+{
+    scale
+} */
+
 #page1 h1
 {
     position: relative;
@@ -424,7 +434,90 @@ video
 
 #footer
 {
-    height: 40vh;
+    height: 44vh;
     width: 100%;
-    background: linear-gradient(to left bottom, #26A536, #ACE022);
+    background: linear-gradient(to left bottom, #17A139, #AFE323);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 4.5% 0;
+    padding: 5.75% 0 20px 0;
+    position: relative;
+    z-index: 10;
 }
+#footer>img
+{
+    position: absolute;
+    left: 0;
+    top: 7%;
+    height: 84%;
+    z-index: -1;
+} 
+#content
+{
+    height: 100%;
+    width: 86%;
+    margin: 0 7%;
+    padding: 0 15px;
+}
+#footer-content
+{
+    height: 100%;
+    width: 100%;
+}
+#f1
+{
+    height: 60%;
+    width: 15%;
+}
+#f1-1
+{
+    height: 50%;
+}
+#f1-2
+{
+    height: 50%;
+}
+#f1-1 img
+{
+    position: absolute;
+    width: 130px;
+    height: 100px;
+}
+/*
+#footer-content
+{
+    height: 100%;
+    width: 100%;
+    margin: 0 6.5%;
+    padding: 0 1%;
+    position: relative;
+    display: flex;
+    gap: 150px;
+}
+#f1
+{
+    height: 60%;
+}
+#f1-1 img
+{
+    position: absolute;
+    width: 130px;
+    height: 100px;
+}
+
+#footer-footer
+{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+#ff-1 a::before
+{
+    height: 18px;
+    width: 2px;
+    background-color: black;
+} */
