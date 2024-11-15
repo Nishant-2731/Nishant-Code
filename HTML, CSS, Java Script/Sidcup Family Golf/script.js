@@ -185,3 +185,54 @@ gsap.from("#page4 h1", {
         scrub: 2,
     }
 })
+
+var aAll = document.querySelectorAll("#footer a");
+
+aAll.forEach(function(elem){
+    elem.addEventListener("mouseenter", function(){
+        cursorEnter(elem);
+        gsap.to(elem, {
+            color: "white"
+        })
+    })
+    elem.addEventListener("mouseleave", function(){
+        cursorLeave(elem);
+        gsap.to(elem, {
+            color: "black"
+        })
+    })
+})
+
+var iAll = document.querySelectorAll("#footer i");
+
+iAll.forEach(function(elem){
+    elem.addEventListener("mouseenter", function(){
+        cursorEnter(elem);
+        gsap.to(elem, {
+            color: "white"
+        })
+    })
+    elem.addEventListener("mouseleave", function(){
+        cursorLeave(elem);
+        gsap.to(elem, {
+            color: "black"
+        })
+    })
+})
+
+var imgAll = document.querySelectorAll("#footer #content img");
+
+imgAll.forEach(function(elem){
+    elem.addEventListener("mouseenter", function(){
+        cursorEnter(elem);
+        gsap.to(elem, {
+            scale: 0.9
+        })
+    })
+    elem.addEventListener("mouseleave", function(){
+        cursorLeave(elem);
+        gsap.to(elem, {
+            scale: 1
+        })
+    })
+})
