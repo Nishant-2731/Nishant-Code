@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 
+const {Schema} = mongoose;
+const Review = require("./Review.js")
+
 const listingSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -30,6 +33,19 @@ const listingSchema = new mongoose.Schema({
     country: {
         type: String
     },
+    reviews: [{
+        type: Schema.Types.ObjectId,
+        ref: "Review"
+    }]
+})
+
+// This post mongoose middleware deletes Reviews from review collections which belonged to the deleted listing
+listingSchema.post("findOneAndDelete", async (listing)=>
+{
+    if(listing)
+    {
+        await Review.deleteMany({_id: {$in: listing.reviews}});
+    }
 })
 
 const Listing = mongoose.model("Listing", listingSchema)
