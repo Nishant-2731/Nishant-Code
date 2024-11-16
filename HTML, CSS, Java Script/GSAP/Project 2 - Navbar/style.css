@@ -15,3 +15,64 @@ html, body
     height: 100%;
     width: 100%;
 }
+body
+{
+    overflow-x: hidden;
+}
+
+#main
+{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://images.pexels.com/photos/531767/pexels-photo-531767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+}
+#nav
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+#nav h2
+{
+    font-size: 30px;
+}
+#nav i
+{
+    font-size: 30px;
+    font-weight: 800;
+    cursor: pointer;
+}
+#full
+{
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.297);
+    top: 0;
+    right: -40%;
+    backdrop-filter: blur(20px);
+    padding: 60px 70px;
+    /* filter: blur(30px); */
+}
+#full h4
+{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#full i
+{
+    position: absolute;
+    top: 5%;
+    right: 7.5%;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+}
