@@ -1,0 +1,248 @@
+@font-face 
+{
+    font-family: "gilroy";
+    src: url(./Gilroy/Gilroy-Medium.ttf);
+}
+@font-face 
+{
+    font-family: "gilroy-light";
+    src: url(./Gilroy/Gilroy-Light.ttf);
+}
+@font-face 
+{
+    font-family: "neuemachina";
+    src: url(./NeueMachina/NeueMachina-Regular.otf);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html, body
+{
+    height: 100%;
+    width: 100%;
+}
+body
+{
+    overflow-x: hidden;
+}
+section
+{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+}
+.part2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+nav h1
+{
+    font-size: 50px;
+}
+nav h1 i
+{
+    rotate: 45deg;
+    display: inline-block;
+}
+nav h4
+{
+    font-family: gilroy-light;
+    font-size: 25px;
+}
+nav button
+{
+    font-family: gilroy;
+    padding: 22px 40px;
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.center
+{
+    height: 70%;
+    width: 100%;
+    padding: 50px 100px 0 100px;
+    display: flex;
+}
+.center .center-part1
+{
+    height: 100%;
+    width: 44%;
+}
+.center-part1 h1
+{
+    font-size: 75px;
+    line-height: 1.2;
+    font-family: neuemachina;
+}
+.center-part1 p
+{
+    font-size: 25px;
+    line-height: 1.2;
+    width: 95%;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+.center-part2
+{
+    height: 100%;
+    width: 54%;
+    position: relative;
+}
+.center-part2 img
+{
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+.center button
+{
+    color: white;
+    font-family: gilroy-light;
+    padding: 22px 40px;
+    font-size: 25px;
+    background-color: black;
+    border-radius: 10px;
+    border: none;
+}
+.section1-bottom
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+.section1-bottom img
+{
+    height: 60px;
+}
+
+.section2 .services
+{
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+.services h3
+{
+    background-color: #9AE975;
+    font-family: neuemachina;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 50px;
+}
+.services p
+{
+    width: 40%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.container
+{
+    min-height: 95vh;
+    width: 100%;
+    padding: 40px 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 60px;
+}
+.elem
+{
+    height: 350px;
+    width: 48%;
+    border: 2px solid black;
+    border-radius: 20px;
+    flex-shrink: 0;
+    box-shadow: 0px 20px 0px black;
+    padding: 60px;
+    display: flex;
+}
+.elem-part1
+{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.elem-part1 h2
+{
+    width: 85%;
+    background-color: #9AE975;
+    font-family: neuemachina;
+    font-size: 35px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.elem-part1 h4
+{
+    width: 75%;
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.elem-part1 h4 i
+{
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    font-weight: 900;
+    padding: 7px;
+}
+.elem-part2
+{
+    height: 100%;
+    width: 50%
+}
+.elem-part2 img
+{
+    height: 82%;
+}
+.black
+{
+    background-color: black;
+}
+.black .elem-part1 h2
+{
+    background-color: white;
+}
+.black .elem-part1 h4
+{
+    color: white;
+}
+.black .elem-part1 h4 i
+{
+    color: black;
+    background-color: white;
+}
+.black .elem-part2 img
+{
+    background-color: white;
+    border-radius: 20px;
+}
