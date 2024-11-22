@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'gilroy';
+    src: url(./assets/Gilroy/Gilroy-Medium.ttf);
+}
+@font-face {
+    font-family: 'neuemachina';
+    src: url(./assets/NeueMachina/NeueMachina-Regular.otf);
+}
+* {
+    font-family: gilroy;
+}
+::selection {
+    color: greenyellow;
+}
