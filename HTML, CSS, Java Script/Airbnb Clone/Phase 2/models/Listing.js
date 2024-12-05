@@ -35,8 +35,12 @@ const listingSchema = new mongoose.Schema({
     },
     reviews: [{
         type: Schema.Types.ObjectId,
-        ref: "Review"
-    }]
+        ref: "Review",
+    }],
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+    }
 })
 
 // This post mongoose middleware deletes Reviews from review collections which belonged to the deleted listing
