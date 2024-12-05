@@ -4,10 +4,9 @@ const path = require("path");
 const mongoose = require("mongoose");
 // This is used for overriding methods and applying our own method to a form
 const methodOverride = require("method-override");
-// This is used to validate listing
 const Listing = require("./models/Listing.js");
-// This is used to validate review
 const Review = require("./models/Review.js");
+// This method is used to pass header, footer, boilerplate common code templates for use in multiple files
 const ejsMate = require("ejs-mate");
 // This is used to add catch and next() to every route
 const wrapAsync = require("./utils/wrapAsync.js"); 
