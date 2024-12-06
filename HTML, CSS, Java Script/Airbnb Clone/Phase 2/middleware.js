@@ -3,9 +3,10 @@ const Review = require("./models/Review")
 const ExpressError = require("./utils/ExpressError.js");
 const {listingSchema, reviewSchema} = require("./schema.js");
 
+// This middleware is used to check whether the user is logged in or not
 module.exports.isLoggedIn = (req, res, next)=>
 {
-    // console.log(req.path, "......" , req.originalUrl)
+    // This stores the redirectUrl in session if not logged in.
     if(!req.isAuthenticated())
     {
         req.session.redirectUrl = req.originalUrl
@@ -15,6 +16,7 @@ module.exports.isLoggedIn = (req, res, next)=>
     next();
 }
 
+// This middleware is used to store redirectUrl is the URL the user was trying is reach but could not because not logged in
 module.exports.saveRedirectUrl = (req, res, next)=>
 {
     if(req.session.redirectUrl)
@@ -24,6 +26,7 @@ module.exports.saveRedirectUrl = (req, res, next)=>
     next();
 }
 
+// This middleware is used to check whether the user logged in is the owner of the listing
 module.exports.isOwner = async (req, res, next)=>
 {
     let { id } = req.params;
@@ -36,6 +39,7 @@ module.exports.isOwner = async (req, res, next)=>
     next();
 }
 
+// This middleware is used to check whether the user logged in is the author of the review
 module.exports.isReviewAuthor = async (req, res, next)=>
 {
     let { id, reviewId } = req.params;
@@ -48,6 +52,7 @@ module.exports.isReviewAuthor = async (req, res, next)=>
     next();
 }
 
+// Validate Listing
 module.exports.validateListing = (req, res, next)=>
 {
     let {error} = listingSchema.validate(req.body);
@@ -62,6 +67,7 @@ module.exports.validateListing = (req, res, next)=>
     }
 }
 
+// Validate Review
 module.exports.validateReview = (req, res, next)=>
 {
     let {error} = reviewSchema.validate(req.body);

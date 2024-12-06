@@ -18,6 +18,7 @@ router.post("/signup", wrapAsync(async (req, res, next)=>
 {
     try
     {
+        // This logs in the user when they sign up for convenience
         let {username, email, password} = req.body;
         const newUser = new User ({email, username});
         const registeredUser = await User.register(newUser, password);
@@ -52,6 +53,7 @@ router.post("/login", saveRedirectUrl, passport.authenticate("local", {failureRe
 {
     req.flash("success", "Welcome Back to Wanderlust, You are logged in!")
     let redirectUrl = res.locals.redirectUrl || "/listings"
+    // Redirects to the page requiring user to log in which the user was trying to reach after log in
     res.redirect(redirectUrl)
 }))
 
